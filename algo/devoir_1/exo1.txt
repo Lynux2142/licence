@@ -1,0 +1,18 @@
+VARIABLES A, B, C : ENTIER;
+
+ECRIRE ("Entrez la valeur de A: ");
+LIRE (A);
+ECRIRE ("Entrez la valeur de B: ");
+LIRE (B);
+ECRIRE ("Entrez la valeur de C: ");
+LIRE (C);
+
+SI (A < B ET A < C)
+ALORS
+	ECRIRE (A);
+SINON SI (B < A ET B < C)
+ALORS
+	ECRIRE (B);
+SINON
+	ECRIRE (C);
+FIN SI;

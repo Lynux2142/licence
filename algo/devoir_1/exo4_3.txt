@@ -1,0 +1,22 @@
+VARIABLES	N, SUM, I: ENTIER;
+			IS_OK: BOOLEEN;
+
+IS_OK <- FAUX;
+TANT QUE (IS_OK = FAUX)
+	ECRIRE ("Veuillez entrer la valeur de N: ");
+	LIRE (N);
+	SI (N >= 0)
+	ALORS
+		IS_OK = VRAI;
+	SINON
+		ECRIRE ("Veuillez entrer une valeur supérieur ou égale a 0");
+	FIN SI;
+FAIT;
+
+SUM <- 0;
+I = 0;
+REPETER
+	SUM <- SUM + I;
+	I <- I + 1;
+JUSQU'A (I > N)
+ECRIRE (SUM);

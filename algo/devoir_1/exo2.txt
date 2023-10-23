@@ -1,0 +1,18 @@
+VARIABLES A, B, C, MAX: ENTIER;
+
+ECRIRE ("Entrez la valeur de A: ");
+LIRE (A);
+ECRIRE ("Entrez la valeur de B: ");
+LIRE (B);
+ECRIRE ("Entrez la valeur de C: ");
+LIRE (C);
+
+MAX <- A;
+SI (B > MAX)
+ALORS
+	MAX <- B;
+SINON SI (C > MAX)
+ALORS
+	MAX <- C;
+FIN SI;
+ECRIRE (MAX);

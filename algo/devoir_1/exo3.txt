@@ -1,0 +1,46 @@
+VARIABLES	A, B, OPE: ENTIER;
+			IS_OK: BOOLEEN
+
+IS_OK <- FAUX;
+TANT QUE (IS_OK = FAUX)
+	ECRIRE ("Entrez une valeur positive: ");
+	LIRE (A);
+	SI (A > 0)
+	ALORS
+		IS_OK <- VRAI;
+	SINON
+		ECRIRE ("Veuillez entrer une valeur positive");
+	FIN SI;
+FAIT;
+
+IS_OK <- FAUX;
+TANT QUE (IS_OK = FAUX)
+	ECRIRE ("Entrez une valeur positive et supérieur à A: ");
+	LIRE (B);
+	SI (B > 0 ET B > A)
+	ALORS
+		IS_OK <- VRAI;
+	SINON
+		ECRIRE ("Veuillez entrer une valeur positive et supérieur à A");
+	FIN SI;
+FAIT;
+
+IS_OK <- FAUX;
+TANT QUE (IS_OK = FAUX)
+	ECRIRE ("Entrez votre choix d'opération:");
+	ECRIRE ("	1	Addition");
+	ECRIRE ("	2	Soustraction");
+	ECRIRE ("	3	Multiplication");
+	LIRE (OPE);
+	SI (OPE >= 1 OU OPE <= 3)
+	ALORS
+		SELON QUE OPE VAUT
+			1: ECRIRE (A + B);
+			2: ECRIRE (A - B);
+			3: ECRIRE (A * B);
+		FIN SELON;
+		IS_OK <- VRAI;
+	SINON
+		ECRIRE ("Veuillez écrire une valeur entre 1 et 3");
+	FIN SI;
+FAIT;

@@ -1,0 +1,21 @@
+VARIABLES	N, RESULT: ENTIER;
+			IS_OK: BOOLEEN;
+
+IS_OK <- FAUX;
+TANT QUE IS_OK = FAUX
+	ECRIRE ("Veuillez entrer la valeur de N: ");
+	LIRE (N);
+	SI (N >= 0) ALORS
+		IS_OK <- VRAI;
+	SINON
+		ECRIRE ("Veuillez écrire une valeur supérieur ou égale a 0");
+	FIN SI;
+FAIT;
+
+RESULT <- 1;
+TANT QUE (N > 0)
+	RESULT <- RESULT * N;
+	N <- N - 1
+FAIT;
+
+ECRIRE (RESULT);
