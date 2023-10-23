@@ -1,0 +1,24 @@
+PROCEDURE RechercheIndiceMiniMaxi (
+	TAB: TYPTAB,
+	DIM: ENTIER,
+	IND1: ENTIER,
+	IND2: ENTIER,
+	INDMINI: ENTIER,
+	INDMAXI: ENTIER,
+);
+VARIABLES MINI, MAXI: ENTIER;
+
+DEBUT {RechercheIndiceMiniMaxi}
+	MINI <- TAB[IND1];
+	MAXI <- TAB[IND1];
+	POUR I VARIANT DE IND1 A IND2
+		SI (TAB[I] < MINI) ALORS
+			MINI <- TAB[I];
+			INDMINI <- I;
+		FIN SI;
+		SI (TAB[I] > MAXI) ALORS
+			MAXI <- TAB[I];
+			INDMAXI <- I;
+		FIN SI;
+	FAIT;
+FIN; {RechercheIndiceMiniMaxi}

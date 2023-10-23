@@ -1,0 +1,13 @@
+PROCEDURE RechercheMiniMaxi (TAB: TYPTAB, DIM: ENTIER, MINI: ENTIER, MAXI: ENTIER);
+DEBUT {RechercheMiniMaxi}
+	MINI <- TAB[1];
+	MAXI <- TAB[1];
+	POUR I VARIANT DE 1 A DIM
+		SI (TAB[I] < MINI) ALORS
+			MINI <- TAB[I];
+		FIN SI;
+		SI (TAB[I] > MAXI) ALORS
+			MAXI <- TAB[I];
+		FIN SI;
+	FAIT;
+FIN; {RechercheMiniMaxi}

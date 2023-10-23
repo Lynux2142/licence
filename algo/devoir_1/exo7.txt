@@ -1,0 +1,13 @@
+PROCEDURE ProduitMatrice (A: TYPMAT, B: TYPMAT, C: TYPMAT, DIM: ENTIER);
+VARIABLES	RESULT: ENTIER;
+
+DEBUT {ProduitMatrice}
+	POUR X VARIANT DE 1 A DIM
+		POUR Y VARIANT DE 1 A DIM
+			C[Y][X] <- 0
+			POUR I VARIANT DE 1 A DIM
+				C[Y][X] <- C[Y][X] + (A[Y,I] * B[I,X])
+			FAIT;
+		FAIT;
+	FAIT;
+FIN; {ProduitMatrice}
