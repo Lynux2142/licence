@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Escape Game au SUP-FC</title>
+		<meta charset="UTF-8">
+		<link href="../css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<img alt="png" src="../images/logo-escape.png">
+			<h2>Réservation</h2>
+		</header>
+		<ul>
+			<li><a href="../index.html">Accueil</a></li>
+			<li><a href="scenarios.html">Nos scénarios</a></li>
+			<li style="list-style: none;">
+				<ul>
+					<li><a href="../html/scenarios.html#amphi">Panique en amphi A</a></li>
+					<li><a href="../html/scenarios.html#copie">La copie perdu de F. Peureux</a></li>
+					<li><a href="../html/scenarios.html#casse">Le casse du bureau du Directeur</a></li>
+				</ul>
+			</li>
+			<li><a href="reserver.html">Réserver</a></li>
+			<li><a href="mailto:escape@ctu.univ-fcomte.fr">Nous contacter</a></li>
+		</ul>
+		<p>
+			Remplissez le formulaire ci-dessous pour réserver votre session.
+			Tous les champs sont obligatoires.
+		</p>
+		<form method="get" action="validation.html">
+			<table>
+				<tr>
+					<td colspan="2">Vos coordonnées</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="txtNomPrenom">Nom et Prénom :</label>
+					</td>
+					<td>
+						<input type="text" name="txtNomPrenom" id="txtNomPrenom" minlength="2" placeholder="ex. John Doe" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="txtEmail">Adresse email :</label>
+					</td>
+					<td>
+						<input type="email" name="txtEmail" id="txtEmail" placeholder="johndoe@univ-fcomte.fr" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="txtTel">Numéro de téléphone :</label>
+					</td>
+					<td>
+						<input type="tel" name="txtTel" id="txtTel" pattern="0[67].[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" placeholder="06.12.34.56.78" required>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">Votre équipe</td>
+				</tr>
+				<tr>
+					<td>
+						Nombre de joueurs :
+					</td>
+					<td>
+						<input type="radio" name="radJoueurs" value="2" checked>
+						<input type="radio" name="radJoueurs" value="3">
+						<input type="radio" name="radJoueurs" value="4">
+						<input type="radio" name="radJoueurs" value="5">
+						<input type="radio" name="radJoueurs" value="6">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="txtNomEquipe">Nom d'équipe :</label>
+					</td>
+					<td>
+						<input type="text" name="txtNomEquipe" id="txtNomEquipe" minlength="2" placeholder="ex. La Joyeuse Bande" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Niveau de l'équipe :
+					</td>
+					<td>
+						<input type="range" name="ranNiveau" min="1" max="5" step="1" value="1">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">Votre partie</td>
+				</tr>
+				<tr>
+					<td>
+						Scénario choisi :
+					</td>
+					<td>
+						<select name="selScenario">
+							<option value="amphi" selected>Scénario 1 : Panique en amphi A</option>
+							<option value="copie">Scénario 2 : La copie perdu de F. Peureux</option>
+							<option value="casse">Scénario 3 : Le casse du bureau du Directeur</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Date :
+					</td>
+					<td>
+						<input type="date" name="date" value="2021-08-25">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Horaire :
+					</td>
+					<td>
+						<select name="selHoraire">
+							<option>10</option>
+							<option>12</option>
+							<option selected>14</option>
+							<option>16</option>
+							<option>18</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<label>
+				<input type="checkbox" name="cbCGU" value="1" required> J'ai
+				pris connaissance des conditions générales d'utilisation et je
+				les accepte.
+			</label>
+			<br>
+			<label>
+				<input type="checkbox" name="cbContact" value="1" checked>
+				J'accepte d'être contacté par d'autres sociétés à but
+				commercial.
+			</label>
+			<br>
+			<input type="text" name="txtAuteur" value="Lucas Guillerot" hidden>
+			<input type="submit" name="btnReserver" value="Réserver ma session">
+		</form>
+		<footer>
+			&#169; Octobre 2021 - Université de Franche-Comté - SUP-FC
+		</footer>
+	</body>
+</html>
